@@ -26,9 +26,9 @@
   {{ $order = "order-md-2" }}
 {{ end }}
 
-{{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
+{{ $js_category_classes := delimit (apply (apply $item.Params.categories "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
-<div class="col-lg-12 project-item isotope-item {{ $js_tag_classes | safeHTMLAttr }}">
+<div class="col-lg-12 project-item isotope-item {{ $js_category_classes | safeHTMLAttr }}">
   <div class="row align-items-center">
     <div class="col-12 col-md-6">
       <h3 class="article-title mb-0 mt-0">
